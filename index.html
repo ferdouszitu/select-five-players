@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Best Five</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white">
+    <!-------- Header Part-------------->
+    <header class="d-flex container p-0 bg-black">
+        <div>
+            <img class="img-fluid w-100 h-100" src="images/logoWithMbappe.png" alt="">
+        </div>
+        <div class="text-center ps-3 pe-3 mt-5">
+            <h1 class="text-primary">Select Best Five Players</h1>
+            <img class="img-fluid" src="images/Line Marker.png" alt="">
+            <p>The Best FIFA Men's Player is given to the most outstanding player in men's football.</p>
+        </div>
+        <div>
+            <img class="img-fluid w-100 h-100" src="images/logoWithMessi.png" alt="">
+        </div>
+    </header>
+    <!-------------- Main Part------------------>
+    <main>
+        <section class="container">
+            <div class="row md-container mt-5">
+                <!----- Players Part--------->
+                <div class="col-md-9 col-5">
+                    <div class="row">
+                        <div class="col-md-4 pb-3">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/Missi.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="messi" class="card-title">Lionel Messi</h5>
+                                    <p class="card-text text-secondary">36 Goals . 146 Assist</p>
+                                    <button id="selectMessi" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pb-3">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/Neymar.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="neymar" class="card-title">Neymar Jr</h5>
+                                    <p class="card-text text-secondary">46 Goals . 156 Assist</p>
+                                    <button id="selectNeymar" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/Mbappe.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="mbappe" class="card-title">Kylian Mbappé</h5>
+                                    <p class="card-text text-secondary">35 Goals . 142 Assist</p>
+                                    <button id="selectMbappe" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 pt-3">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/victor.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="victor" class="card-title">Vítor Machado</h5>
+                                    <p class="card-text text-secondary">31 Goals . 125 Assist</p>
+                                    <button id="selectVictor" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 pt-3">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/ramos.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="ramos" class="card-title">Sergio Ramos</h5>
+                                    <p class="card-text text-secondary">28 Goals . 120 Assist</p>
+                                    <button id="selectRamos" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pt-3">
+                            <div class="card border border-0 bg-black">
+                                <img src="images/renato.png" alt="">
+                                <div class=" card-body   text-center">
+                                    <h5 id="renato" class="card-title">Renato Sanches</h5>
+                                    <p class="card-text text-secondary">31 Goals . 132 Assist</p>
+                                    <button id="selectRenato" class="btn btn-primary w-75">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----- Side Part -------->
+                <div class="col-md-3 col-7">
+                    <div class="col-12 bg-black">
+                        <div class="text-center">
+                            <h3>Selected - V</h3>
+                            <img class="img-fluid mb-4" src="images/Ureg-Ureg Marker.png" alt="">
+                        </div>
+                        <ol id="appendPlayers">
+
+                        </ol>
+                    </div>
+                    <div class="col-12 bg-black text-center">
+                        <div>
+                            <h3>Budget</h3>
+                            <img class="img-fluid mb-4" src="images/Ureg-Ureg Marker.png" alt="">
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex p-0">
+                                <div class="col-6">
+                                    <h6 class="fw-lighter">Per Player:</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input id="perPlayerPrice" class="bg-black border border-white text-white w-75"
+                                        type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="calculate" class="btn btn-primary w-75 mt-3 mb-3">Calculate</button>
+                        <div class="row">
+                            <div class="col d-flex p-0">
+                                <div class="col-6">
+                                    <h6 class="fw-lighter">Players Cost:</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input id="playersCost" class="bg-black border border-white text-white w-75"
+                                        type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <div class="col d-flex p-0">
+                                <div class="col-6">
+                                    <h6 class="fw-lighter">Manager:</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input id="manager" class="bg-black border border-white text-white w-75"
+                                        type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex p-0">
+                                <div class="col-6">
+                                    <h6 class="fw-lighter">Coach:</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input id="coach" class="bg-black border border-white text-white w-75" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="calculateTotal" class="btn btn-primary w-75 mt-3 mb-3">Calculate Total</button>
+                        <div class="row">
+                            <div class="col d-flex p-0">
+                                <div class="col-6">
+                                    <h6 class="fw-lighter">Total:</h6>
+                                </div>
+                                <div class="col-6">
+                                    <input id="totalCost" class="bg-black border border-white text-white w-75 mb-3"
+                                        type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!----------- Footer Part----------->
+    <footer class="text-center mt-5 pt-5">
+        <hr class="pb-5">
+        <small class="p-5">Copyright @ 2022 All Rights Reserved.</small>
+    </footer>
+
+    <!---------JS Part---------->
+
+    <script src="topFive.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
